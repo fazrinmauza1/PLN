@@ -585,145 +585,57 @@ const { wa_version, os_version } = DogeXeonOP.user.phone
 pemilik = `${owner}@s.whatsapp.net`
 menu =
 `*_${ucapanWaktu} @${senderr.split('@')[0]}_*
-
-❏「 TIME 」
-${gaya1} *Date* : ${tanggal}
-${gaya1} *Time* : ${time}
-
-❏「 INFO BOT 」
-${gaya1} *Speed* : ${latensie.toFixed(4)} Second
-${gaya1} *Runtime* : ${runtime(process.uptime())}
-${gaya1} *Bot Name* : ${botname}
-${gaya1} *Owner Name* : ${ownername}
-${gaya1} *Owner Number* : @${pemilik.split('@')[0]}
-${gaya1} *Host Name :* ${os.hostname()}
-${gaya1} *Platform :* ${os.platform()}
-${gaya1} *Wa Version :* ${DogeXeonOP.user.phone.wa_version}
-${gaya1} *Mode :* ${self ? "Self" : "Public"}
-${gaya1} *Autoread* : ${autoread ? "Active" : "Off"}
-${gaya1} *Autotype* : ${autoketik ? "Active" : "Off"}
-${gaya1} *Autovn* : ${autovn ? "Active" : "Off"}
-
-❏「 USER INFO 」
-${gaya1} *Name* : ${pushname}
-${gaya1} *Bio* : ${bio_user}
-${gaya1} *Number* : @${senderr.split('@')[0]}
-${gaya1} *Status* : ${isOwner ? 'Owner' : 'User'}`
+`
 teks =
-`_Please Select Button Below_
-_If You Are A Mod User_
-_Please Type ${prefix}command_`
-DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
+`_Please Select Button Below_`
+DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU 🗃️' },type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
 case 'command':
 
 listMsg = {
 buttonText: 'MENU 📃',
 footerText: `*${botname}*`,
-description: `Hi Friend @${senderr.split('@')[0]}, Please select the menu here`,
+description: `Hai @${senderr.split('@')[0]}, Please select the menu here`,
 sections: [
 {
 "title": `${tanggal} - ${time}`,
 rows: [
 {
-"title": "GROUP MENU",
-"description": `Display A List Of Group Features`,
-"rowId": `${prefix}grupmenu`
+"title": "DATA DIRI",
+"description": ``,
+"rowId": `.datadiri`
 },
 {
-"title": "DOWNLOAD MENU",
-"description": `Display A List Of Features To Download`,
-"rowId": `${prefix}downloadmenu`
+"title": "PERFORMANCE ULP",
+"rowId": `.ulp`
 },
 {
-"title": "MAKER MENU",
-"description": `Display A List Of Features To Create Logo`,
-"rowId": `${prefix}makermenu`
+"title": "PERFORMANCE UP3",
+"rowId": `PERFORMANCE UP3`
 },
 {
-"title": "GAME MENU",
-"description": `Display A List Of Game Features`,
-"rowId": `${prefix}gamemenu`
+"title": "JADWAL GROUND PATROL",
+"rowId": `JADWAL GROUND PATROL`
 },
 {
-"title": "RANDOM IMAGE MENU",
-"description": `Display A List Of Random Photo Features`,
-"rowId": `${prefix}randomimage`
+"title": "LOKASI GARDU",
+"rowId": `.gardu`
 },
 {
-"title": "RANDOM VIDEO",
-"description": `Display A List Of Random Video Features`,
-"rowId": `${prefix}randomvideo`
+"title": "RATTING PLN MOBILE",
+"rowId": `.ratingpln`
 },
 {
-"title": "AESTHETIC GIRL MENU",
-"description": `Display A List Of 18+ Intake Features`,
-"rowId": `${prefix}asupanmenu`
+"title": "CICO HARIAN",
+"rowId": `CICO HARIAN`
 },
 {
-"title": "RANDOM GIRL MENU",
-"description": `Display A List Of Random Girl Features`,
-"rowId": `${prefix}cecanmenu`
+"title": "CICO BULANAN",
+"rowId": `CICO BULANAN`
 },
 {
-"title": "ANIME MENU",
-"description": `Display A List Of Anime Features`,
-"rowId": `${prefix}animemenu`
-},
-{
-"title": "NSFW/HENTAI MENU",
-"description": `Display A List Of Nsfw 18+ Features`,
-"rowId": `${prefix}nsfwmenu`
-},
-{
-"title": "STICKER MENU",
-"description": `Display A List Of Sticker Features`,
-"rowId": `${prefix}stickermenu`
-},
-{
-"title": "FUN MENU",
-"description": `Display A List Of Fun Features`,
-"rowId": `${prefix}funmenu`
-},
-{
-"title": "SOUND MENU",
-"description": `Display A List Of Sounds`,
-"rowId": `${prefix}soundmenu`
-},
-{
-"title": "OCR MENU",
-"description": `Display A List Of Ocr Features`,
-"rowId": `${prefix}ocrmenu`
-},
-{
-"title": "CONVERTER MENU",
-"description": `Display A List Of Convert Features`,
-"rowId": `${prefix}convertmenu`
-},
-{
-"title": "LEVELING MENU",
-"description": `Display A List Of Leveling Features`,
-"rowId": `${prefix}levelingmenu`
-},
-{
-"title": "SEARCH MENU",
-"description": `Display A List Of Searching Features`,
-"rowId": `${prefix}searchmenu`
-},
-{
-"title": "APK MENU",
-"description": `Display A List Of Apk Features`,
-"rowId": `${prefix}apkmenu`
-},
-{
-"title": "OTHER MENU",
-"description": `Display A List Of Other Features`,
-"rowId": `${prefix}othermenu`
-},
-{
-"title": "OWNER MENU",
-"description": `Display A List Of Owner Features`,
-"rowId": `${prefix}ownermenu`
+"title": "TUTORIAL RECLOSER",
+"rowId": `.tutorialrecloser`
 }
 ]
 }],
@@ -731,265 +643,862 @@ listType: 1
 }
 DogeXeonOP.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [senderr]},quoted:fgi})
 break
+case 'gardu67':
+
+listMsg = {
+buttonText: 'MENU 📃',
+footerText: `*${botname}*`,
+description: `Hai @${senderr.split('@')[0]}, Berikut List Lokasi Gardu`,
+sections: [
+{
+"title": `${tanggal} - ${time}`,
+rows: [
+{
+"title": "BI0001",
+"rowId": `DATA DIRI`
+},
+{
+"title": "BI0002",
+"rowId": `DATA DIRI`
+},
+{
+	"title": "BI0003",
+"rowId": `DATA DIRI`
+},
+{
+"title": "BI0002",
+"rowId": `.LOK GARDU`
+}
+]
+}],
+listType: 1
+}
+DogeXeonOP.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [senderr]},quoted:fgi})
+break
+case 'datadiri':
+
+menu =
+`  " TERIMAKASI ANDA BERADA DI DASBOARD DATA DIRI ✍️ "
+
+Komang Joni Ali Susanto
+I Kadek Satria Yana
+I Ketut Sutasena
+Kadek Hendra Dwi Jayanto
+I Gusti Putu Suadnyana
+I Wayan Budiartana
+I Kadek Widnyana
+I Nyoman Juliana
+Abdullah
+Wayan Sumberjaya
+Kadek Martana
+I Wayan Juliarta
+I Dewa Gede Anom Rai
+I Kadek Purwa Sutawijaya
+Komarudin
+I Nengah Juliana
+I Komang Suarmana
+I Dewa Gede Putra Darmawan
+Muhammad Umar Faruq
+Anak Agung Alit Citrawan
+I Wayan Arta Wijaya
+I Wayan Surada
+I Nyoman Yugananta
+I Nengah Budiana
+I Wayan Warjana
+Sang Putu Arjana
+I Wayan Astika (C)
+I Gede Dika Juli Purnawa
+I Putu Sukendra
+I Komang Ardika
+I Wayan Suyadnya Putra
+I Wayan Janggi
+I Putu Edi Sutiawan
+Ni Nyoman Ayu Hanjani
+I Putu Yudi Harta Negara
+Sang Nyoman Wijawan
+Ngakan Made Mustika
+Putu Guna Wijaya`
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}detaildatadiri`, buttonText: { displayText: 'DETAIL' }, type: 1 },{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+break
+case 'detaildatadiri':
+
+listMsg = {
+buttonText: 'List Detail📃',
+footerText: `*${botname}*`,
+description: `Hai @${senderr.split('@')[0]}, TERIMAKASI ANDA BERADA DI DASBOARD DETAIL DATA DIRI ✍️ `,
+sections: [
+{
+"title": `${tanggal} - ${time}`,
+rows: [
+{
+"title": "Komang Joni Ali Susanto",
+"rowId": `DATA DIRI`
+},
+{
+"title": "Kadek Satria Yana",
+"rowId": `DATA DIRI`
+},
+{
+	"title": "Ketut Sutasena",
+"rowId": `DATA DIRI`
+},
+{
+"title": "Kadek Hendra Dwi Jayanto",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Gusti Putu Suadnyana",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Wayan Budiartana",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Kadek Widnyana",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Nyoman Juliana Abdullah",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Wayan Sumberjaya",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Kadek Martana",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Wayan Juliarta",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Dewa Gede Anom Rai",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Kadek Purwa Sutawijaya Komarudin",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Nengah Juliana",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Komang Suarmana",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Dewa Gede Putra Darmawan",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Muhammad Umar Faruq",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Anak Agung Alit Citrawan",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Wayan Arta Wijaya",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Wayan Surada",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Nyoman Yugananta",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Nengah Budiana",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Wayan Warjana",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Sang Putu Arjana",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Wayan Astika (C)",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Gede Dika Juli Purnawa",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Putu Sukendra",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Komang Ardika",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Wayan Suyadnya Putra",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Wayan Janggi",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Putu Edi Sutiawan",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Ni Nyoman Ayu Hanjani",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Putu Yudi Harta Negara",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Sang Nyoman Wijawan",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Ngakan Made Mustika",
+"rowId": `.DATA DIRI`
+},
+{
+"title": "Putu Guna Wijaya",
+"rowId": `.DATA DIRI`
+}
+]
+}],
+listType: 1
+}
+DogeXeonOP.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [senderr]},quoted:fgi})
+break
+case 'tutorialrecloser':
+
+menu =
+`LBS BEBALANG :  link
+LBS SIDEMBUNUT : link`
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+break
 case 'allmenu':
 
 reply(`*_Sorry Features ${prefix + command} Not Available Please Type ${prefix}command_*`)
 break
-case 'grupmenu':
-case 'groupmenu':
+
+case 'ulp':
 
 menu =
-`*「 GROUP MENU 」*
+`
+*「 TERIMKASIH ANDA BERADA DI DASBOARD PERFORMAN ULP」*
 
-${gaya2} ${prefix}antilink _on / off_
-${gaya2} ${prefix}antivirtex _on / off_
-${gaya2} ${prefix}welcome _on / off_
-${gaya2} ${prefix}nsfw _on / off_
-${gaya2} ${prefix}group _open / closed_
-${gaya2} ${prefix}promote _@tag / reply_
-${gaya2} ${prefix}demote _@tag / reply_
-${gaya2} ${prefix}add _916xx_
-${gaya2} ${prefix}kick _@tag / reply_
-${gaya2} ${prefix}getdesc
-${gaya2} ${prefix}setpp _reply_
-${gaya2} ${prefix}setdesc _text_
-${gaya2} ${prefix}setname _text_
-${gaya2} ${prefix}getbio _reply target_
-${gaya2} ${prefix}getdp _tag_
-${gaya2} ${prefix}getname _reply target_
-${gaya2} ${prefix}tagall
-${gaya2} ${prefix}hidetag _text_
-${gaya2} ${prefix}contact _916x|Name_
-${gaya2} ${prefix}contag _@tag|Name_
-${gaya2} ${prefix}sticktag _Reply Sticker_
-${gaya2} ${prefix}totag _Reply Image_
-${gaya2} ${prefix}creategroup _Name|tag_
-${gaya2} ${prefix}promoteall
-${gaya2} ${prefix}demoteall
-${gaya2} ${prefix}listadmin
-${gaya2} ${prefix}leave
-${gaya2} ${prefix}grupowner
-${gaya2} ${prefix}groupinfo
-${gaya2} ${prefix}grouplink
-${gaya2} ${prefix}onlinelist
-${gaya2} ${prefix}resetgrouplink`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+55220_KOMANG JONI ALI SUSANTO
+55220_I KADEK SATRIA YANA
+55220_I KETUT SUTASENA
+55220_KADEK HENDRA DWI JAYANTO
+55220_I GUSTI PUTU SUADNYANA
+55220_I WAYAN BUDIARTANA
+55220_I KADEK WIDNYANA
+55220_I NYOMAN JULIANA
+55220_ABDULLAH
+55220_WAYAN SUMBERJAYA
+55220_KADEK MARTANA
+55220_I WAYAN JULIARTA
+55220_I DEWA GEDE ANOM RAI
+55220_I KADEK PURWA SUTAWIJAYA
+55220_KOMARUDIN
+55220_I NENGAH JULIANA
+55220_I KOMANG SUARMANA
+55220_I DEWA GEDE PUTRA DARMAWAN
+55220_MUHAMMAD UMAR FARUQ
+55220_ANAK AGUNG ALIT CITRAWAN
+55220_I WAYAN ARTA WIJAYA
+55220_I WAYAN SURADA
+55220_I NYOMAN YUGANANTA
+55220_I NENGAH BUDIANA
+55220_I WAYAN WARJANA
+55220_SANG PUTU ARJANA
+55220_I WAYAN ASTIKA (C)
+55220_I GEDE DIKA JULI PURNAWA
+55220_I PUTU SUKENDRA
+55220_I KOMANG ARDIKA
+55220_I WAYAN SUYADNYA PUTRA
+55220_I WAYAN JANGGI
+55220_I PUTU EDI SUTIAWAN
+55220_NI NYOMAN AYU HANJANI
+55220_I PUTU YUDI HARTA NEGARA
+55220_SANG NYOMAN WIJAWAN
+55220_NGAKAN MADE MUSTIKA
+55220_PUTU GUNA WIJAYA`
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 }], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
-case 'downloadmenu':
+case 'gardu':
 
 menu =
-`*「 DOWNLOAD MENU 」*
+`*「 TERIMKASIH ANDA BERADA DI DASBOARD PERFORMAN DATA GARDU 」*
 
-${gaya2} ${prefix}mediafire _Link_
-${gaya2} ${prefix}soundcloud _Link_
-${gaya2} ${prefix}telegramsticker _Link_
-${gaya2} ${prefix}spotify _Link_
-${gaya2} ${prefix}tiktok _Link_
-${gaya2} ${prefix}tiktoknowm _Link_
-${gaya2} ${prefix}tiktokwm _Link_
-${gaya2} ${prefix}tiktokmp3 _Link_
-${gaya2} ${prefix}ytmp3 _Link_
-${gaya2} ${prefix}ytmp4 _Link_
-${gaya2} ${prefix}play _song name_
-${gaya2} ${prefix}instagram _video link_
-${gaya2} ${prefix}herodetail _hero name_
-${gaya2} ${prefix}herolist
-${gaya2} ${prefix}lyrics _song name_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-break
-case 'makermenu':
+NO GARDU
 
-menu =
-`*「 MAKER MENU 」*
-
-${gaya2} ${prefix}freefire _text_
-${gaya2} ${prefix}silverplaybutton _text_
-${gaya2} ${prefix}goldplaybutton _text_
-${gaya2} ${prefix}blackpink _text_
-${gaya2} ${prefix}halloween _text_
-${gaya2} ${prefix}halloween2 _text_
-${gaya2} ${prefix}3dgradient _text_
-${gaya2} ${prefix}naturalleaves _text_
-${gaya2} ${prefix}dropwater _text_
-${gaya2} ${prefix}blood _text_
-${gaya2} ${prefix}blood2 _text_
-${gaya2} ${prefix}snow _text_
-${gaya2} ${prefix}cloud _text_
-${gaya2} ${prefix}neondevil _text_
-${gaya2} ${prefix}neon _text_
-${gaya2} ${prefix}glowingneonlight _text_
-${gaya2} ${prefix}neonlight _text_
-${gaya2} ${prefix}neonlight2 _text_
-${gaya2} ${prefix}neonlight3 _text_
-${gaya2} ${prefix}greenneon _text_
-${gaya2} ${prefix}toxic _text_
-${gaya2} ${prefix}matrix _text_
-${gaya2} ${prefix}thunder _text_
-${gaya2} ${prefix}thunder2 _text_
-${gaya2} ${prefix}bokeh _text_
-${gaya2} ${prefix}carbontext _text_
-${gaya2} ${prefix}christmas _text_
-${gaya2} ${prefix}breakwall _text_
-${gaya2} ${prefix}roadwarning _text_
-${gaya2} ${prefix}engraved3d _text_
-${gaya2} ${prefix}embossed _text_
-${gaya2} ${prefix}3dstone _text_
-${gaya2} ${prefix}futuristic _text_
-${gaya2} ${prefix}sketch _text_
-${gaya2} ${prefix}bluecircuit _text_
-${gaya2} ${prefix}space _text_
-${gaya2} ${prefix}magmahot _text_
-${gaya2} ${prefix}artpapercut _text_
-${gaya2} ${prefix}3dluxurygold _text_
-${gaya2} ${prefix}robotr2d2 _text_
-${gaya2} ${prefix}harrypotter _text_
-${gaya2} ${prefix}glitch3 _text_
-${gaya2} ${prefix}greenhorror _text_
-${gaya2} ${prefix}horrorgift _text_
-${gaya2} ${prefix}erodedmetal _text_
-${gaya2} ${prefix}3dglowingmetal _text_
-${gaya2} ${prefix}blackmetal _text_
-${gaya2} ${prefix}bluemetal _text_
-${gaya2} ${prefix}shynimetal _text_
-${gaya2} ${prefix}rustymetal _text_
-${gaya2} ${prefix}metalpurple _text_
-${gaya2} ${prefix}metalrainbow _text_
-${gaya2} ${prefix}metaldarkgold _text_
-${gaya2} ${prefix}colorfullluxurymetal _text_
-${gaya2} ${prefix}glossybluemetal _text_
-${gaya2} ${prefix}3dglossymetal _text_
-${gaya2} ${prefix}3ddeepseametal _text_
-${gaya2} ${prefix}leddisplayscreen _text_
-${gaya2} ${prefix}metallic _text_
-${gaya2} ${prefix}glossymetallic _text_
-${gaya2} ${prefix}christmastree _text_
-${gaya2} ${prefix}sparklesmerrychristmas _text_
-${gaya2} ${prefix}countryflag3d _text_
-${gaya2} ${prefix}americanflag3d _text_
-${gaya2} ${prefix}3dscfi _text_
-${gaya2} ${prefix}3drainbow _text_
-${gaya2} ${prefix}3dwaterpipe _text_
-${gaya2} ${prefix}3dchrome _text_
-${gaya2} ${prefix}bluegem _text_
-${gaya2} ${prefix}purplegem _text_
-${gaya2} ${prefix}pinkcandy _text_
-${gaya2} ${prefix}transformer _text_
-${gaya2} ${prefix}berry _text_
-${gaya2} ${prefix}brokenglass _text_
-${gaya2} ${prefix}3drealistic _text_
-${gaya2} ${prefix}3dunderwater _text_
-${gaya2} ${prefix}writeinsandsummerbeach _text_
-${gaya2} ${prefix}sandwriting _text_
-${gaya2} ${prefix}foilballoon _text_
-${gaya2} ${prefix}3dglue _text_
-${gaya2} ${prefix}1917 _text_
-${gaya2} ${prefix}minion _text_
-${gaya2} ${prefix}doubleexposure _text_
-${gaya2} ${prefix}holographic3d _text_
-${gaya2} ${prefix}deluxegold _text_
-${gaya2} ${prefix}deluxesilver _text_
-${gaya2} ${prefix}glossycarbon _text_
-${gaya2} ${prefix}fabric _text_
-${gaya2} ${prefix}xmascards3d _text_
-${gaya2} ${prefix}wicker _text_
-${gaya2} ${prefix}fireworksparkle _text_
-${gaya2} ${prefix}skeleton _text_
-${gaya2} ${prefix}ultragloss _text_
-${gaya2} ${prefix}denim _text_
-${gaya2} ${prefix}decorategreen _text_
-${gaya2} ${prefix}peridot _text_
-${gaya2} ${prefix}rock _text_
-${gaya2} ${prefix}lava _text_
-${gaya2} ${prefix}rainbowequalizer _text_
-${gaya2} ${prefix}purpleglass _text_
-${gaya2} ${prefix}decorativeglass _text_
-${gaya2} ${prefix}chocolatecake _text_
-${gaya2} ${prefix}strawberry _text_
-${gaya2} ${prefix}koifish _text_
-${gaya2} ${prefix}bread _text_
-${gaya2} ${prefix}3dbox _text_
-${gaya2} ${prefix}freeadvancedglow _text_
-${gaya2} ${prefix}honey _text_
-${gaya2} ${prefix}marble _text_
-${gaya2} ${prefix}marbleslabs _text_
-${gaya2} ${prefix}icecold _text_
-${gaya2} ${prefix}fruitjuice _text_
-${gaya2} ${prefix}abstragold _text_
-${gaya2} ${prefix}biscuit _text_
-${gaya2} ${prefix}bagel _text_
-${gaya2} ${prefix}wood _text_
-${gaya2} ${prefix}hexagolden _text_
-${gaya2} ${prefix}wonderfulgraffitiart _text_
-${gaya2} ${prefix}8bit _Text1&Text2_
-${gaya2} ${prefix}pornhub _Text1&Text2_
-${gaya2} ${prefix}glitch _Text1&Text2_
-${gaya2} ${prefix}glitch2 _Text1&Text2_
-${gaya2} ${prefix}layered _Text1&Text2_
-${gaya2} ${prefix}3dsteel _Text1&Text2_
-${gaya2} ${prefix}realistic _Text1&Text2_
-${gaya2} ${prefix}lionlogo _Text1&Text2_
-${gaya2} ${prefix}ninjalogo _Text1&Text2_
-${gaya2} ${prefix}wolf _Text1&Text2_
-${gaya2} ${prefix}wolf2 _Text1&Text2_
-${gaya2} ${prefix}halloween3 _Text1&Text2_
-${gaya2} ${prefix}marvel _Text1&Text2_
-${gaya2} ${prefix}marvel2 _Text1&Text2_
-${gaya2} ${prefix}cinematichorror _Text1&Text2_
-${gaya2} ${prefix}avengers _Text1&Text2_
-${gaya2} ${prefix}graffiti3 _Text1&Text2_
-${gaya2} ${prefix}captainamerica _Text1&Text2_
-${gaya2} ${prefix}girlneko _Text1&Text2_
-${gaya2} ${prefix}sadboy _Text1&Text2_
-${gaya2} ${prefix}makerkaneki _Text1&Text2_
-${gaya2} ${prefix}rem _Text1&Text2_
-${gaya2} ${prefix}lolimaker _Text1&Text2_
-${gaya2} ${prefix}gura _Text1&Text2_`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+BI0064
+BI0048
+BI0098
+BI0027
+BI0057
+BI0039
+TK0004
+TK0009
+TK0053
+TK0024
+TK0014
+TK0016
+TK0025
+TK0038
+TK0055
+TK0015
+TK0045
+TK0023
+BI0091
+BI0079
+BI0058
+BI0076
+BI0031
+BI0043
+BI0084
+BI0089
+BI0046
+BI0014
+BI0016
+BI0034
+BI0101
+BI0004
+BI0012
+BI0054
+BI0045
+BI0097
+BI0001
+BI0053
+BI0099
+BI0051
+BI0073
+BI0035
+BI0086
+BI0087
+BI0015
+BI0068
+BI0024
+BA0034
+BI0025
+BI0026
+BI0036
+BI0037
+BI0002
+BI0006
+BI0063
+BI0049
+BI0003
+BI0056
+BI0065
+BI0082
+BI0018
+BI0085
+BI0047
+BI0093
+BI0008
+BI0096
+BI0067
+BI0059
+BI0007
+BI0009
+BI0028
+BI0088
+BI0013
+BI0095
+BI0072
+BI0052
+BI0094
+BI0066
+BI0103
+BI0102
+KN0009
+KN0011
+KN0014
+KN0015
+KN0017
+KN0018
+KN0069
+KN0073
+KN0076
+KN0104
+KN0124
+KN0128
+KN0148
+KN0166
+KN0167
+KN0177
+KN0193
+KN0215
+KN0216
+KN0217
+KN0229
+KN0269
+KN0127
+KN0068
+KN0192
+KN0152
+KN0191
+KN0279
+SS0019
+KN0055
+KNXX1
+KN0185
+KN0062
+KN0158
+KN0187
+KN0131
+KN0231
+KN0061
+KN0249
+KN0259
+KN0097
+KN0159
+KN0032
+KN0141
+KN0138
+KN0046
+KN0077
+KN0178
+KN0174
+KN0045
+KN0044
+KN0002
+KN0243
+KB0076
+KB0023
+KB0077
+KB0042
+KB0015
+KN0019
+KN0156
+KN0021
+KN0267
+KN0106
+KB0075
+KN0095
+KN0088
+KN0248
+KN0063
+KN0264
+KN0043
+KN0089
+KN0155
+KN0042
+KN0204
+KN0114
+KN0029
+KN0083
+KN0028
+KN0221
+KN0245
+KN0142
+KN0033
+KN0205
+KN0186
+KN0071
+KN0115
+KN0023
+KN0232
+KN0024
+KN0049
+KN0164
+KN0223
+KN0058
+KN0139
+KN0022
+KN0066
+KN0165
+KN0195
+KN0196
+KN0101
+KN0065
+KN0276
+KN0278
+KN0188
+KN0209
+KN0129
+KN0079
+KN0189
+KN0211
+KN0173
+KN0081
+KN0146
+KN0064
+KN0203
+KN0246
+KN0262
+KN0161
+KN0041
+KN0236
+KN0237
+KN0273
+KN0274
+KN0027
+KN0287
+KN0067
+KN0084
+KN0121
+KN0208
+KN0057
+KN0272
+KN0202
+KN0035
+KN0034
+KN0266
+KN0227
+KN0091
+KN0147
+KN0133
+KN0132
+KN0153
+KN0102
+KN0137
+KN0001
+KN0251
+KN0072
+KN0222
+KN0271
+KN0154
+KN0126
+KN0053
+KN0006
+KN0194
+KN0005
+KN0004
+KN0144
+KN0143
+KN0235
+KN0263
+KN0225
+KN0134
+KN0135
+KN0136
+KN0199
+KN0107
+KN0289
+BI0104
+KN0291
+KN0151
+KN0103
+KN0286
+KN0275
+KN0234
+KN0052
+KN0277
+KN0117
+KN0109
+KN0224
+KN0268
+KN0099
+KN0207
+KN0181
+KN0201
+KN0247
+KN0284
+KN0283
+KN0074
+KN0176
+KN0285
+KN0118
+KN0098
+KN0265
+KN0105
+BI0038
+KN0281
+KN0292
+BI0023
+KN0093
+KN0051
+KN0119
+KN0255
+KN0125
+KN0282
+KN0047
+KN0122
+KN0108
+KN0007
+KN0261
+KN0206
+KN0092
+KN0116
+KN0036
+KN0111
+BI0069
+BI0062
+KN0112
+KN0085
+KN0086
+BI0041
+BI0044
+BI0061
+BI0083
+BI0019
+BI0074
+BI0075
+BI0042
+BI0032
+BI0029
+BI0071
+KN0012
+KN0013
+KN0025
+KN0026
+KN0048
+KN0056
+KN0059
+KN0087
+KN0145
+KN0157
+KN0162
+KN0163
+KN0168
+KN0169
+KN0179
+KN0218
+KN0184
+KN0212
+KN0228
+KN0254
+KN0258
+KN0149
+KN0219
+SS0086
+SS0096
+SS0097
+SS0099
+SS0004
+SS0025
+SS0022
+SS0023
+SS0024
+SS0012
+SS0013
+SS0016
+SS0029
+SS0091
+SS0015
+SS0014
+SS0028
+SS0026
+SS0027
+SS0011
+SS0021
+SS0009
+SS0006
+SS0008
+SS0018
+SS0003
+SS0002
+SS0001
+SS0007
+SS0005
+SS0066
+BI0021
+BI0022
+KN0003
+KN0008
+KN0031
+KN0082
+KN0182
+KN0183
+SS0031
+SS0032
+SS0033
+SS0034
+SS0035
+SS0036
+SS0038
+SS0039
+SS0041
+SS0042
+SS0043
+SS0044
+SS0045
+SS0046
+SS0047
+SS0048
+SS0049
+SS0051
+SS0052
+SS0053
+SS0054
+SS0055
+SS0056
+SS0057
+SS0058
+SS0059
+SS0061
+SS0062
+SS0063
+SS0064
+SS0065
+SS0067
+SS0068
+SS0069
+SS0071
+SS0072
+SS0073
+SS0074
+SS0075
+SS0076
+SS0077
+SS0078
+SS0079
+SS0083
+SS0084
+SS0085
+SS0088
+SS0089
+SS0093
+SS0094
+SS0095
+TK0052
+KN0256
+BI0077
+KN0078
+KN0175
+KN0038
+KN0037
+KN0253
+KN0039
+KN0113
+KN0096
+KN0172
+KN0171
+KN0123
+TK0011
+TK0042
+TK0001
+TK0044
+TK0049
+TK0002
+TK0006
+TK0018
+TK0005
+TK0039
+TK0046
+TK0008
+TK0032
+TK0041
+TK0026
+TK0056
+TK0007
+TK0013
+TK0019
+TK0017
+TK0054
+TK0051
+TK0034
+TK0028
+TK0021
+TK0022
+TK0043
+TK0033
+TK0036
+TK0035
+TK0037
+TK0031
+TK0029
+TK0048
+TK0047
+TK0027
+KN0075
+BI0092
+BI0033
+BI0078`
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'gamemenu':
 
 menu =
-`*「 GAME 」*
+`*「 TERIMKASIH ANDA BERADA DI DASBOARD  RATTING PLN MOBILE 」*
 
-${gaya2} ${prefix}truth
-${gaya2} ${prefix}dare`
+55220_ABDULLAH
+55220_ANAK AGUNG ALIT CITRAWAN
+55220_I DEWA GEDE ANOM RAI
+55220_I DEWA GEDE PUTRA DARMAWAN
+55220_I GEDE DIKA JULI PURNAWA
+55220_I GUSTI PUTU SUADNYANA
+55220_I KADEK PURWA SUTAWIJAYA
+55220_I KADEK SATRIA YANA
+55220_I KADEK WIDNYANA
+55220_I KETUT SUTASENA
+55220_I KOMANG ARDIKA
+55220_I KOMANG SUARMANA
+55220_I NENGAH BUDIANA
+55220_I NENGAH JULIANA
+55220_I NYOMAN JULIANA
+55220_I NYOMAN YUGANANTA
+55220_I PUTU EDI SUTIAWAN
+55220_I PUTU SUKENDRA
+55220_I WAYAN ARTA WIJAYA
+55220_I WAYAN ASTIKA (C)
+55220_I WAYAN BUDIARTANA
+55220_I WAYAN JANGGI
+55220_I WAYAN JULIARTA
+55220_I WAYAN SURADA
+55220_I WAYAN SUYADNYA PUTRA
+55220_I WAYAN WARJANA
+55220_KADEK HENDRA DWI JAYANTO
+55220_KADEK MARTANA
+55220_KOMARUDIN
+55220_MUHAMMAD UMAR FARUQ
+55220_SANG PUTU ARJANA
+55220_WAYAN SUMBERJAYA`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
-case 'randomimage':
+case 'ratingpln':
 
 menu =
-`*「 RANDOM IMAGE MENU 」*
+`*「 TERIMKASIH ANDA BERADA DI DASBOARD  RATTING PLN MOBILE  」*
 
-${gaya2} ${prefix}ppcouple
-${gaya2} ${prefix}meme
-${gaya2} ${prefix}memeindo
-${gaya2} ${prefix}quotesimage
-${gaya2} ${prefix}katakataimage
-${gaya2} ${prefix}renungan
-${gaya2} ${prefix}darkjokesindo
-${gaya2} ${prefix}bts
-${gaya2} ${prefix}exo
-${gaya2} ${prefix}aesthetic
-${gaya2} ${prefix}dog
-${gaya2} ${prefix}cat
-${gaya2} ${prefix}panda
-${gaya2} ${prefix}panda1
-${gaya2} ${prefix}fox
-${gaya2} ${prefix}koala
-${gaya2} ${prefix}bird
-${gaya2} ${prefix}doraemon
-${gaya2} ${prefix}pokemon
-${gaya2} ${prefix}wallpaperhacker
-${gaya2} ${prefix}wallpaperhacker2
-${gaya2} ${prefix}wallpaperharley
-${gaya2} ${prefix}wallpaperjoker
-${gaya2} ${prefix}wallpaperpubg
-${gaya2} ${prefix}wallpaperhp
-${gaya2} ${prefix}wallpaperhp2
-${gaya2} ${prefix}wallpaperkpop
-${gaya2} ${prefix}wallpaperblackpink
-${gaya2} ${prefix}wallpapergame`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+55220_ABDULLAH#⭐
+55220_ANAK AGUNG ALIT CITRAWAN#⭐
+55220_I DEWA GEDE ANOM RAI#⭐
+55220_I DEWA GEDE PUTRA DARMAWAN#⭐
+55220_I GEDE DIKA JULI PURNAWA#⭐
+55220_I GUSTI PUTU SUADNYANA#⭐
+55220_I KADEK PURWA SUTAWIJAYA#⭐
+55220_I KADEK SATRIA YANA#⭐
+55220_I KADEK WIDNYANA#⭐
+55220_I KETUT SUTASENA#⭐
+55220_I KOMANG ARDIKA#⭐
+55220_I KOMANG SUARMANA#⭐
+55220_I NENGAH BUDIANA#⭐
+55220_I NENGAH JULIANA#⭐
+55220_I NYOMAN JULIANA#⭐
+55220_I NYOMAN YUGANANTA#⭐
+55220_I PUTU EDI SUTIAWAN#⭐
+55220_I PUTU SUKENDRA#⭐
+55220_I WAYAN ARTA WIJAYA#⭐
+55220_I WAYAN ASTIKA (C)#⭐
+55220_I WAYAN BUDIARTANA#⭐
+55220_I WAYAN JANGGI#⭐
+55220_I WAYAN JULIARTA#⭐
+55220_I WAYAN SURADA#⭐
+55220_I WAYAN SUYADNYA PUTRA#⭐
+55220_I WAYAN WARJANA#⭐
+55220_KADEK HENDRA DWI JAYANTO#⭐
+55220_KADEK MARTANA#⭐
+55220_KOMARUDIN#⭐
+55220_MUHAMMAD UMAR FARUQ#⭐
+55220_SANG PUTU ARJANA#⭐
+55220_WAYAN SUMBERJAYA#⭐`
+DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'randomvideo':
 
@@ -1007,22 +1516,7 @@ ${gaya2} ${prefix}storybus
 ${gaya2} ${prefix}storyanime`
 DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}abcde`, buttonText: { displayText: '\n\nAKU ADALAH GAY' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
-case 'asupanmenu':
 
-menu =
-`*「 AESTHETIC GIRL MENU」*
-
-${gaya2} ${prefix}asupan
-${gaya2} ${prefix}asupanloli
-${gaya2} ${prefix}hijaber
-${gaya2} ${prefix}bocil
-${gaya2} ${prefix}rikagusriani
-${gaya2} ${prefix}santuy
-${gaya2} ${prefix}ukhty
-${gaya2} ${prefix}gheayubi
-${gaya2} ${prefix}nantalia`
-DogeXeonOP.sendMessage(from, { contentText: `${menu}`, footerText: `*_${tanggal}_*`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'BACK ⬅️' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-break
 case 'cecanmenu':
 
 menu =
